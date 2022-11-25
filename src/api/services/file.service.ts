@@ -5,7 +5,7 @@ import cssMinifier from "clean-css";
 import jsMinifier from "uglify-js";
 import config from "../../config";
 import { FILE_EXTENSIONS, MESSAGES, MIME_TYPES } from "../../constants/enums";
-import { file as fileUtils } from "../../../utils";
+import { file as fileUtils } from "../../utils";
 import childProcess from "child_process";
 import { File, IFile } from "../../models";
 import mongoose from "mongoose";

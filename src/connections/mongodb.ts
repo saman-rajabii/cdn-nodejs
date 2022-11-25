@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import config from "../config";
-import { logger } from "../../utils";
+import { logger } from "../utils";
 import { LOG_LABELS } from "../constants/enums";
 
 const { userName, password, hostname, databaseName } = config.mongodb;

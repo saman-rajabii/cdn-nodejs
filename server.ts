@@ -1,6 +1,6 @@
 import app from "./app";
 import config from "./src/config";
-import { logger } from "./utils";
+import { logger } from "./src/utils";
 import { LOG_LABELS } from "./src/constants/enums";
 
 function init() {
