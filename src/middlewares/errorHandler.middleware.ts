@@ -2,7 +2,7 @@ import { ValidationError } from "express-validation";
 import { NextFunction, Request, Response } from "express";
 import config from "../config";
 import { HTTP_CODE, MESSAGES, LOG_LABELS } from "../constants/enums";
-import { logger } from "../../utils";
+import { logger } from "../utils";
 
 export default function (
   error: Error,

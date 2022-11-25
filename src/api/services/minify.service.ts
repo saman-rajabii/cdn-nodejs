@@ -3,7 +3,7 @@ import path from "path";
 import cssMinifier from "clean-css";
 import jsMinifier from "uglify-js";
 import { MIME_TYPES } from "../../constants/enums";
-import { file as fileUtils } from "../../../utils";
+import { file as fileUtils } from "../../utils";
 import mongoose from "mongoose";
 
 process.on("message", (msg: any) => {
