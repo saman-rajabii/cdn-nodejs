@@ -1,0 +1,56 @@
+version: '3.7'
+
+services:
+
+  cdn:
+  
+    image: cdn-nodejs:1.0
+
+    restart: always
+
+    container_name: cdn
+
+    working_dir: /app
+
+    depends_on:
+
+      - cdnDatabase
+
+    env_file: ./.env
+
+    links:
+
+      - cdnDatabase
+
+    ports:
+
+      - "3000:3000"
+
+    expose:
+
+      - 3000
+
+   
+  cdnDatabase:
+
+    image: 'mongo:4.4.6'
+
+    container_name: cdnDatabase
+
+    restart: always
+
+    environment:
+
+      - ALLOW\_EMPTY\_PASSWORD=yes
+
+    ports:
+
+      - "27017:27017"
+
+    expose:
+
+      - 27017
+
+    volumes:
+
+      - ./db:/data/db
